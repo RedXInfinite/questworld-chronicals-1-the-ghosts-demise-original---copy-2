@@ -1,5 +1,6 @@
 {
     "name": "QuestWorld Chronicals 1 (The ghosts demise) original - Copy #2",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "device": "*",
