@@ -75,7 +75,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . f f f . . . . . 
         `],
     100,
-    false
+    true
     )
 })
 info.onScore(250, function () {
@@ -379,7 +379,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f . . . f f . . . . . 
         `],
     100,
-    false
+    true
     )
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -455,7 +455,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . f f . . . f f f . . . . 
         `],
     100,
-    false
+    true
     )
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
@@ -535,7 +535,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . f f f . . . . 
         `],
     200,
-    false
+    true
     )
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite2, otherSprite2) {
