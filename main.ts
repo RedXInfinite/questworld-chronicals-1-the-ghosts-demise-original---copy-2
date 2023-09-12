@@ -460,7 +460,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
-    music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
     info.changeScoreBy(-5)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -542,12 +541,10 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite2, otherSprite2) {
     sprites.destroy(chicken, effects.hearts, 500)
     info.changeLifeBy(1)
-    music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
 })
 info.onLifeZero(function () {
     game.splash("Better luck Next time")
     game.gameOver(false)
-    music.play(music.createSoundEffect(WaveShape.Noise, 5000, 1, 151, 151, 564, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
 info.onScore(500, function () {
     DialougeMode = true
@@ -694,7 +691,6 @@ info.onScore(500, function () {
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite3, otherSprite3) {
     sprites.destroy(Villan_Basic, effects.spray, 500)
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
     info.changeScoreBy(10)
 })
 let chicken: Sprite = null
